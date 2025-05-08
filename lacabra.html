@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Botones</title>
+    <style>
+        /* Estilo general del cuerpo con un fondo degradado */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Degradado de morado a azul */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilo del contenedor del formulario */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Títulos y etiquetas */
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        /* Estilo para los botones */
+        .botones {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .botones button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Estilos específicos para cada botón */
+        .botones button[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .botones button[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .botones button[type="button"] {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Efecto hover */
+        .botones button:hover {
+            opacity: 0.9;
+        }
+
+        /* Efecto al hacer clic */
+        .botones button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <h2>Formulario de Contacto</h2>
+
+        <!-- Nombre completo -->
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" value="jose miguel hernandez martinez">
+
+        <!-- Correo electrónico -->
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" value="josehernandez5--4@dgb.edu.mx">
+
+        <!-- Comentario -->
+        <label for="comentario">Comentario</label>
+        <textarea id="comentario" name="comentario"></textarea>
+
+        <!-- Botones -->
+        <div class="botones">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+            <button type="button" onclick="mostrarAyuda
